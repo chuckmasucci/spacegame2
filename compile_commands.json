@@ -1,0 +1,67 @@
+[
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-I/home/chuck/.local/include",
+            "-o",
+            "src/sprite.o",
+            "src/sprite.c"
+        ],
+        "directory": "/home/chuck/Projects/spacegame2",
+        "file": "src/sprite.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-I/home/chuck/.local/include",
+            "-o",
+            "src/gfx.o",
+            "src/gfx.c"
+        ],
+        "directory": "/home/chuck/Projects/spacegame2",
+        "file": "src/gfx.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-I/home/chuck/.local/include",
+            "-o",
+            "src/player.o",
+            "src/player.c"
+        ],
+        "directory": "/home/chuck/Projects/spacegame2",
+        "file": "src/player.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-I/home/chuck/.local/include",
+            "-o",
+            "src/spacegame.o",
+            "src/spacegame.c"
+        ],
+        "directory": "/home/chuck/Projects/spacegame2",
+        "file": "src/spacegame.c"
+    },
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/SDL2",
+            "-I/home/chuck/.local/include",
+            "-o",
+            "src/render.o",
+            "src/render.c"
+        ],
+        "directory": "/home/chuck/Projects/spacegame2",
+        "file": "src/render.c"
+    }
+]

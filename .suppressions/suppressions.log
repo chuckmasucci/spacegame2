@@ -1,0 +1,4216 @@
+==13065== Memcheck, a memory error detector
+==13065== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==13065== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==13065== Command: ./bin/spacegame
+==13065== Parent PID: 13064
+==13065== 
+==13065== 
+==13065== HEAP SUMMARY:
+==13065==     in use at exit: 65,778 bytes in 589 blocks
+==13065==   total heap usage: 26,128 allocs, 25,539 frees, 332,104,243 bytes allocated
+==13065== 
+==13065== 1 bytes in 1 blocks are definitely lost in loss record 1 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53D97AD: _XlcDefaultMapModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9BA7: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   fun:_XlcDefaultMapModifiers
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 2 bytes in 1 blocks are still reachable in loss record 2 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x4A8649E: strdup (in /usr/lib/libc-2.28.so)
+==13065==    by 0x53D2518: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 2 bytes in 1 blocks are still reachable in loss record 3 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x4A8649E: strdup (in /usr/lib/libc-2.28.so)
+==13065==    by 0x53CEF64: _XlcResolveLocaleName (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D26E9: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_XlcResolveLocaleName
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 7 bytes in 1 blocks are still reachable in loss record 4 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x4A8649E: strdup (in /usr/lib/libc-2.28.so)
+==13065==    by 0x53D27EB: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 8 bytes in 1 blocks are still reachable in loss record 5 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53E3E2A: _XimOpenIM (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949942: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XimOpenIM
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 16 bytes in 1 blocks are still reachable in loss record 6 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x53CFE3B: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D029D: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 16 bytes in 2 blocks are still reachable in loss record 7 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53D07BB: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 16 bytes in 2 blocks are indirectly lost in loss record 8 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53D07BB: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 24 bytes in 1 blocks are still reachable in loss record 9 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CFA06: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24A5: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 24 bytes in 1 blocks are still reachable in loss record 10 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53D9A18: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 24 bytes in 1 blocks are still reachable in loss record 11 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x58FC0FE: XextCreateExtension (in /usr/lib/libXext.so.6.4.0)
+==13065==    by 0x7892C10: ??? (in /usr/lib/libGLX_nvidia.so.410.73)
+==13065==    by 0x788D240: glXChooseVisual (in /usr/lib/libGLX_nvidia.so.410.73)
+==13065==    by 0x494E178: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x494E44F: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4919B45: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491BE05: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C5A8: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XextCreateExtension
+   obj:/usr/lib/libGLX_nvidia.so.410.73
+   fun:glXChooseVisual
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 24 bytes in 1 blocks are indirectly lost in loss record 12 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C5D7E6: ???
+==13065==    by 0x6C573B6: ???
+==13065==    by 0x6C57529: ???
+==13065==    by 0x6C3C9CF: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 24 bytes in 1 blocks are indirectly lost in loss record 13 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C5D782: ???
+==13065==    by 0x6C3CA7E: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 29 bytes in 1 blocks are definitely lost in loss record 14 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C5B900: ???
+==13065==    by 0x6C3C46D: ???
+==13065==    by 0x6C3CBF2: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 29 bytes in 1 blocks are definitely lost in loss record 15 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C5B900: ???
+==13065==    by 0x6C3CE1E: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 38 bytes in 1 blocks are definitely lost in loss record 16 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C5B900: ???
+==13065==    by 0x6C3CD45: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 40 bytes in 1 blocks are still reachable in loss record 17 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53AACBC: XInitThreads (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494F7DA: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C34E: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XInitThreads
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 40 bytes in 1 blocks are still reachable in loss record 18 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53AACD6: XInitThreads (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494F7DA: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C34E: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:XInitThreads
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 40 bytes in 1 blocks are still reachable in loss record 19 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CE534: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 47 bytes in 5 blocks are still reachable in loss record 20 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CBF61: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 21 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53B2935: _XrmInternalStringToQuark (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC289: _XlcGetCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CBE79: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetCharSet
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 22 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC20B: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 23 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC22A: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 24 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC249: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 25 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC268: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 26 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF46B: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 27 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF48C: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 28 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF4AD: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 29 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF4CE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 30 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF4EF: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 31 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF510: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 32 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF531: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 33 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF552: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 34 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF573: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 35 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF594: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 36 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5B5: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 37 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D90C1: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 38 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D90E2: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 39 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9103: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 40 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9124: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 41 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9145: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 42 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9166: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 43 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 44 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D91B1: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 45 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D91D2: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 46 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D91F3: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 47 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9214: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 48 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9235: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 49 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9256: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 50 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9277: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 51 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9298: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 52 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D92B9: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 53 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D92DA: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 54 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D92FB: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 55 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D931C: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 56 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D933D: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 57 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D935E: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 58 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D937F: _XlcAddUtf8LocaleConverters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 59 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3478: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 60 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D90C1: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3461: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 61 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D90E2: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3461: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 62 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9103: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3461: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 63 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9124: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3461: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 64 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9145: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3461: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 65 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9166: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3461: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 66 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3461: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 67 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF46B: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 68 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF48C: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 69 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF4AD: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 70 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF4CE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 71 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF4EF: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 72 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF510: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 73 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF531: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 74 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF552: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 75 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF573: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 76 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF594: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 77 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5B5: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 78 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D90C1: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 79 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D90E2: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 80 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9103: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 81 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9124: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 82 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9145: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 83 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9166: _XlcAddUtf8Converters (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 64 bytes in 1 blocks are still reachable in loss record 84 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC9D6: _XlcSetConverter (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF5BE: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 69 bytes in 5 blocks are still reachable in loss record 85 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC5B3: _XlcCreateDefaultCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D0780: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 72 (24 direct, 48 indirect) bytes in 1 blocks are definitely lost in loss record 86 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C5D782: ???
+==13065==    by 0x6C4A68E: ???
+==13065==    by 0x6C52288: ???
+==13065==    by 0x6C40CB2: ???
+==13065==    by 0x6C3C859: ???
+==13065==    by 0x6C3CAD6: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 80 bytes in 5 blocks are still reachable in loss record 87 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC33A: _XlcAddCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D07A3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCharSet
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 80 bytes in 2 blocks are indirectly lost in loss record 88 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C5DE44: ???
+==13065==    by 0x6C4A181: ???
+==13065==    by 0x6C4F3AB: ???
+==13065==    by 0x6C58280: ???
+==13065==    by 0x6C58388: ???
+==13065==    by 0x6C58DE5: ???
+==13065==    by 0x6C595CF: ???
+==13065==    by 0x6C580DC: ???
+==13065==    by 0x6C3FC9D: ???
+==13065==    by 0x6C406A2: ???
+==13065==    by 0x6C40C9B: ???
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+}
+==13065== 80 bytes in 3 blocks are indirectly lost in loss record 89 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x53D06D1: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 88 bytes in 1 blocks are still reachable in loss record 90 of 138
+==13065==    at 0x48376AF: malloc (vg_replace_malloc.c:298)
+==13065==    by 0x4839DE7: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x48E0CB1: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48E1BC8: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48E1E7F: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4899C29: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4898196: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:realloc
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 89 bytes in 5 blocks are still reachable in loss record 91 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC548: _XlcCreateDefaultCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D0780: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 112 bytes in 14 blocks are indirectly lost in loss record 92 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53D07BB: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 136 bytes in 6 blocks are still reachable in loss record 93 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x401C6CE: strdup (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40172AF: _dl_load_cache_lookup (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4009FDB: _dl_map_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x401423E: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_dl_load_cache_lookup
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+}
+==13065== 136 bytes in 6 blocks are still reachable in loss record 94 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x400C840: _dl_new_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x400711C: _dl_map_object_from_fd (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4009D6B: _dl_map_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x401423E: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+}
+==13065== 142 bytes in 18 blocks are still reachable in loss record 95 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CCF71: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CDEC4: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE0FC: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE419: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+}
+==13065== 160 bytes in 2 blocks are still reachable in loss record 96 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CFE0F: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D029D: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 160 bytes in 1 blocks are indirectly lost in loss record 97 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x6C5DBFD: ???
+==13065==    by 0x6C5E220: ???
+==13065==    by 0x6C47201: ???
+==13065==    by 0x6C47C97: ???
+==13065==    by 0x6C47FBA: ???
+==13065==    by 0x6C45702: ???
+==13065==    by 0x6C46179: ???
+==13065==    by 0x6C4ACC0: ???
+==13065==    by 0x6C4E758: ???
+==13065==    by 0x6C51D48: ???
+==13065==    by 0x6C409B4: ???
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+}
+==13065== 160 bytes in 2 blocks are indirectly lost in loss record 98 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CFE0F: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D029D: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 168 bytes in 1 blocks are still reachable in loss record 99 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CFA3D: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24A5: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 176 bytes in 1 blocks are still reachable in loss record 100 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CFA22: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24A5: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+}
+==13065== 192 (16 direct, 176 indirect) bytes in 1 blocks are definitely lost in loss record 101 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x53CFE3B: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D029D: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:realloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 206 bytes in 8 blocks are still reachable in loss record 102 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x401C6CE: strdup (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40172AF: _dl_load_cache_lookup (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4009FDB: _dl_map_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x400E485: openaux (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x400E813: _dl_map_object_deps (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142A3: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_dl_load_cache_lookup
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+}
+==13065== 206 bytes in 8 blocks are still reachable in loss record 103 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x400C840: _dl_new_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x400711C: _dl_map_object_from_fd (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4009D6B: _dl_map_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x400E485: openaux (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x400E813: _dl_map_object_deps (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142A3: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+}
+==13065== 216 bytes in 18 blocks are still reachable in loss record 104 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x4A8649E: strdup (in /usr/lib/libc-2.28.so)
+==13065==    by 0x53CDDBB: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE0FC: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE419: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+}
+==13065== 232 bytes in 1 blocks are still reachable in loss record 105 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x4013C16: add_to_global (in /usr/lib/ld-2.28.so)
+==13065==    by 0x401470F: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x494E2AE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4919B45: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:add_to_global
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 240 bytes in 1 blocks are still reachable in loss record 106 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x4011C20: _dl_check_map_versions (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142ED: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x78BD96D: ??? (in /usr/lib/libGLX_nvidia.so.410.73)
+==13065==    by 0x7892A85: ??? (in /usr/lib/libGLX_nvidia.so.410.73)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dl_check_map_versions
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+   obj:/usr/lib/libGLX_nvidia.so.410.73
+   obj:/usr/lib/libGLX_nvidia.so.410.73
+}
+==13065== 272 bytes in 2 blocks are indirectly lost in loss record 107 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x6C5DBFD: ???
+==13065==    by 0x6C5DCDA: ???
+==13065==    by 0x6C5DE02: ???
+==13065==    by 0x6C462D7: ???
+==13065==    by 0x6C4F3FB: ???
+==13065==    by 0x6C58280: ???
+==13065==    by 0x6C58388: ???
+==13065==    by 0x6C58DE5: ???
+==13065==    by 0x6C595CF: ???
+==13065==    by 0x6C580DC: ???
+==13065==    by 0x6C3FC9D: ???
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+}
+==13065== 274 bytes in 18 blocks are still reachable in loss record 108 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x4A8649E: strdup (in /usr/lib/libc-2.28.so)
+==13065==    by 0x53CDF57: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE0FC: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE419: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+}
+==13065== 288 bytes in 3 blocks are still reachable in loss record 109 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x4011C20: _dl_check_map_versions (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142ED: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x7729800: ??? (in /usr/lib/libGLX.so.0.0.0)
+==13065==    by 0x772AC07: ??? (in /usr/lib/libGLX.so.0.0.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dl_check_map_versions
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+   obj:/usr/lib/libGLX.so.0.0.0
+   obj:/usr/lib/libGLX.so.0.0.0
+}
+==13065== 288 bytes in 18 blocks are still reachable in loss record 110 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CCF4F: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CDEC4: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE0FC: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE419: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+}
+==13065== 320 bytes in 1 blocks are indirectly lost in loss record 111 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x6C5DBFD: ???
+==13065==    by 0x6C5E220: ???
+==13065==    by 0x6C47CC5: ???
+==13065==    by 0x6C47FBA: ???
+==13065==    by 0x6C457B3: ???
+==13065==    by 0x6C45E56: ???
+==13065==    by 0x6C4AF16: ???
+==13065==    by 0x495D6A3: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x495E29C: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x495E4D8: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4948A5B: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 352 bytes in 1 blocks are indirectly lost in loss record 112 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x6C5DBFD: ???
+==13065==    by 0x6C5E220: ???
+==13065==    by 0x6C47CC5: ???
+==13065==    by 0x6C47FBA: ???
+==13065==    by 0x6C457B3: ???
+==13065==    by 0x6C46179: ???
+==13065==    by 0x6C4A9A0: ???
+==13065==    by 0x6C4C768: ???
+==13065==    by 0x6C4D39C: ???
+==13065==    by 0x495D7BC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x495E12C: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 360 bytes in 5 blocks are still reachable in loss record 113 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CC503: _XlcCreateDefaultCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D0780: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XlcCreateDefaultCharSet
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 456 bytes in 1 blocks are still reachable in loss record 114 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CE4D1: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 520 bytes in 13 blocks are definitely lost in loss record 115 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x6C63C52: ???
+==13065==    by 0x6C57385: ???
+==13065==    by 0x6C57529: ???
+==13065==    by 0x6C3C9CF: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 567 (184 direct, 383 indirect) bytes in 1 blocks are definitely lost in loss record 116 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x6C4A0E7: ???
+==13065==    by 0x6C4E708: ???
+==13065==    by 0x6C51D48: ???
+==13065==    by 0x6C409B4: ???
+==13065==    by 0x6C40C80: ???
+==13065==    by 0x6C3C859: ???
+==13065==    by 0x6C3CAD6: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:calloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 576 bytes in 3 blocks are still reachable in loss record 117 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x4011C20: _dl_check_map_versions (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142ED: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x494E2AE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4919B45: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dl_check_map_versions
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 633 bytes in 49 blocks are still reachable in loss record 118 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC5B3: _XlcCreateDefaultCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC123: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 640 bytes in 5 blocks are still reachable in loss record 119 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x40152AE: _dl_close_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4015AA1: _dl_close (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D49287: dlclose (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x49456E5: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491BD08: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4898524: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48986E7: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109E79: destroy_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dl_close_worker
+   fun:_dl_close
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlclose
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:destroy_gfx
+}
+==13065== 669 bytes in 3 blocks are indirectly lost in loss record 120 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x6C5DBFD: ???
+==13065==    by 0x6C5DCDA: ???
+==13065==    by 0x6C5DE02: ???
+==13065==    by 0x6C5C8CD: ???
+==13065==    by 0x6C5CE88: ???
+==13065==    by 0x6C48199: ???
+==13065==    by 0x6C4C758: ???
+==13065==    by 0x6C4E788: ???
+==13065==    by 0x6C51D48: ???
+==13065==    by 0x6C409B4: ???
+==13065==    by 0x6C40C80: ???
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+}
+==13065== 696 bytes in 2 blocks are still reachable in loss record 121 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x4011C20: _dl_check_map_versions (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142ED: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4940373: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49D17E0: IMG_InitPNG (in /usr/lib/libSDL2_image-2.0.so.0.2.2)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dl_check_map_versions
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:IMG_InitPNG
+}
+==13065== 720 bytes in 18 blocks are still reachable in loss record 122 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CDDA2: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE0FC: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE419: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53EF430: _XlcDefaultLoader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949960: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 727 (184 direct, 543 indirect) bytes in 1 blocks are definitely lost in loss record 123 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x6C4A0E7: ???
+==13065==    by 0x6C4AEED: ???
+==13065==    by 0x6C3C83D: ???
+==13065==    by 0x6C3CAD6: ???
+==13065==    by 0x495DA04: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503CE: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48982FF: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:calloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 768 bytes in 5 blocks are still reachable in loss record 124 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x4011C20: _dl_check_map_versions (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142ED: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4940373: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x494576E: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dl_check_map_versions
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 776 bytes in 1 blocks are still reachable in loss record 125 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x48E0C22: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x48E1E8A: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4899C29: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x4898196: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x109749: initialize_gfx (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065==    by 0x1092F9: main (in /home/chuck/Projects/spacegame2/bin/spacegame)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   fun:initialize_gfx
+   fun:main
+}
+==13065== 800 bytes in 50 blocks are still reachable in loss record 126 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC33A: _XlcAddCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC138: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCharSet
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 1,028 bytes in 50 blocks are still reachable in loss record 127 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CC548: _XlcCreateDefaultCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC123: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 1,360 bytes in 17 blocks are indirectly lost in loss record 128 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CFE0F: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D029D: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 1,479 (552 direct, 927 indirect) bytes in 3 blocks are definitely lost in loss record 129 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x6C4A0E7: ???
+==13065==    by 0x6C4F3AB: ???
+==13065==    by 0x6C58280: ???
+==13065==    by 0x6C58388: ???
+==13065==    by 0x6C58DE5: ???
+==13065==    by 0x6C595CF: ???
+==13065==    by 0x6C580DC: ???
+==13065==    by 0x6C3FC9D: ???
+==13065==    by 0x6C406A2: ???
+==13065==    by 0x6C40C9B: ???
+==13065==    by 0x6C3C859: ???
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:calloc
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+   obj:*
+}
+==13065== 1,688 (136 direct, 1,552 indirect) bytes in 1 blocks are definitely lost in loss record 130 of 138
+==13065==    at 0x4839D7B: realloc (vg_replace_malloc.c:826)
+==13065==    by 0x53CFE3B: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D029D: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:realloc
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 2,048 bytes in 1 blocks are still reachable in loss record 131 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CE677: _XlcCreateLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D2722: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x491C3FC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 2,631 bytes in 50 blocks are still reachable in loss record 132 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53CBEAE: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065==    by 0x49503AC: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 3,600 bytes in 50 blocks are still reachable in loss record 133 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53CC503: _XlcCreateDefaultCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC123: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x4949892: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XlcCreateDefaultCharSet
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 4,096 bytes in 1 blocks are still reachable in loss record 134 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x53B275C: _XrmInternalStringToQuark (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC289: _XlcGetCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CBE79: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetCharSet
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+}
+==13065== 7,138 bytes in 6 blocks are still reachable in loss record 135 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x400C552: _dl_new_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x400711C: _dl_map_object_from_fd (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4009D6B: _dl_map_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x401423E: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4B34FF2: _dl_catch_error (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4D498BE: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4D491F9: dlopen (in /usr/lib/libdl-2.28.so)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   obj:/usr/lib/libdl-2.28.so
+   fun:dlopen
+}
+==13065== 8,176 bytes in 1 blocks are still reachable in loss record 136 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53B2516: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53B273B: _XrmInternalStringToQuark (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC289: _XlcGetCharSet (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CBE79: _XlcAddCT (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CC1BC: _XlcInitCTInfo (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D25D3: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C52: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetCharSet
+   fun:_XlcAddCT
+   fun:_XlcInitCTInfo
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+}
+==13065== 8,176 bytes in 1 blocks are still reachable in loss record 137 of 138
+==13065==    at 0x483777F: malloc (vg_replace_malloc.c:299)
+==13065==    by 0x53B2516: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53B2A3F: _XrmInternalStringToQuark (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53CE15C: _XlcGetLocaleDataBase (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D0C09: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D1C5E: ??? (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D24C7: _XlcCreateLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53F3410: _XlcUtf8Loader (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9A05: _XOpenLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B48: _XlcCurrentLC (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x53D9B7E: XSetLocaleModifiers (in /usr/lib/libX11.so.6.3.0)
+==13065==    by 0x494992D: ??? (in /usr/lib/libSDL2-2.0.so.0.9.0)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetLocaleDataBase
+   obj:/usr/lib/libX11.so.6.3.0
+   obj:/usr/lib/libX11.so.6.3.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:_XlcCurrentLC
+   fun:XSetLocaleModifiers
+   obj:/usr/lib/libSDL2-2.0.so.0.9.0
+}
+==13065== 9,538 bytes in 8 blocks are still reachable in loss record 138 of 138
+==13065==    at 0x4839B65: calloc (vg_replace_malloc.c:752)
+==13065==    by 0x400C552: _dl_new_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x400711C: _dl_map_object_from_fd (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4009D6B: _dl_map_object (in /usr/lib/ld-2.28.so)
+==13065==    by 0x400E485: openaux (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x400E813: _dl_map_object_deps (in /usr/lib/ld-2.28.so)
+==13065==    by 0x40142A3: dl_open_worker (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065==    by 0x4013DFE: _dl_open (in /usr/lib/ld-2.28.so)
+==13065==    by 0x4D49159: ??? (in /usr/lib/libdl-2.28.so)
+==13065==    by 0x4B34F56: _dl_catch_exception (in /usr/lib/libc-2.28.so)
+==13065== 
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   obj:/usr/lib/libdl-2.28.so
+   fun:_dl_catch_exception
+}
+==13065== LEAK SUMMARY:
+==13065==    definitely lost: 1,713 bytes in 25 blocks
+==13065==    indirectly lost: 3,629 bytes in 50 blocks
+==13065==      possibly lost: 0 bytes in 0 blocks
+==13065==    still reachable: 60,436 bytes in 514 blocks
+==13065==         suppressed: 0 bytes in 0 blocks
+==13065== 
+==13065== For counts of detected and suppressed errors, rerun with: -v
+==13065== ERROR SUMMARY: 11 errors from 11 contexts (suppressed: 0 from 0)

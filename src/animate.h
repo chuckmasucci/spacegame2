@@ -1,0 +1,1 @@
+#define SPRITE_FRAME_DELAY 100

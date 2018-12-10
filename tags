@@ -1,0 +1,160 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/45968eff/
+$(TARGET)	Makefile	/^$(TARGET): $(OBJECTS)$/;"	t
+0	compile_commands.json	/^            "gcc",$/;"	s	array:0.arguments
+0	compile_commands.json	/^            "gcc",$/;"	s	array:1.arguments
+0	compile_commands.json	/^            "gcc",$/;"	s	array:2.arguments
+0	compile_commands.json	/^            "gcc",$/;"	s	array:3.arguments
+0	compile_commands.json	/^            "gcc",$/;"	s	array:4.arguments
+0	compile_commands.json	/^    {$/;"	o
+1	compile_commands.json	/^            "-c",$/;"	s	array:0.arguments
+1	compile_commands.json	/^            "-c",$/;"	s	array:1.arguments
+1	compile_commands.json	/^            "-c",$/;"	s	array:2.arguments
+1	compile_commands.json	/^            "-c",$/;"	s	array:3.arguments
+1	compile_commands.json	/^            "-c",$/;"	s	array:4.arguments
+1	compile_commands.json	/^    {$/;"	o
+2	compile_commands.json	/^            "-I\/usr\/include\/SDL2",$/;"	s	array:0.arguments
+2	compile_commands.json	/^            "-I\/usr\/include\/SDL2",$/;"	s	array:1.arguments
+2	compile_commands.json	/^            "-I\/usr\/include\/SDL2",$/;"	s	array:2.arguments
+2	compile_commands.json	/^            "-I\/usr\/include\/SDL2",$/;"	s	array:3.arguments
+2	compile_commands.json	/^            "-I\/usr\/include\/SDL2",$/;"	s	array:4.arguments
+2	compile_commands.json	/^    {$/;"	o
+3	compile_commands.json	/^            "-I\/home\/chuck\/.local\/include",$/;"	s	array:0.arguments
+3	compile_commands.json	/^            "-I\/home\/chuck\/.local\/include",$/;"	s	array:1.arguments
+3	compile_commands.json	/^            "-I\/home\/chuck\/.local\/include",$/;"	s	array:2.arguments
+3	compile_commands.json	/^            "-I\/home\/chuck\/.local\/include",$/;"	s	array:3.arguments
+3	compile_commands.json	/^            "-I\/home\/chuck\/.local\/include",$/;"	s	array:4.arguments
+3	compile_commands.json	/^    {$/;"	o
+4	compile_commands.json	/^            "-o",$/;"	s	array:0.arguments
+4	compile_commands.json	/^            "-o",$/;"	s	array:1.arguments
+4	compile_commands.json	/^            "-o",$/;"	s	array:2.arguments
+4	compile_commands.json	/^            "-o",$/;"	s	array:3.arguments
+4	compile_commands.json	/^            "-o",$/;"	s	array:4.arguments
+4	compile_commands.json	/^    {$/;"	o
+5	compile_commands.json	/^            "src\/gfx.o",$/;"	s	array:1.arguments
+5	compile_commands.json	/^            "src\/player.o",$/;"	s	array:2.arguments
+5	compile_commands.json	/^            "src\/render.o",$/;"	s	array:4.arguments
+5	compile_commands.json	/^            "src\/spacegame.o",$/;"	s	array:3.arguments
+5	compile_commands.json	/^            "src\/sprite.o",$/;"	s	array:0.arguments
+6	compile_commands.json	/^            "src\/gfx.c"$/;"	s	array:1.arguments
+6	compile_commands.json	/^            "src\/player.c"$/;"	s	array:2.arguments
+6	compile_commands.json	/^            "src\/render.c"$/;"	s	array:4.arguments
+6	compile_commands.json	/^            "src\/spacegame.c"$/;"	s	array:3.arguments
+6	compile_commands.json	/^            "src\/sprite.c"$/;"	s	array:0.arguments
+ALPHA_MAX	src/sprite.h	/^#define ALPHA_MAX /;"	d
+ALPHA_MIN	src/sprite.h	/^#define ALPHA_MIN /;"	d
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=$(INCLUDES) $(LIBS) $(LIB_DIRS)$/;"	m
+ENEMY_COLUMNS	src/enemy.h	/^#define ENEMY_COLUMNS /;"	d
+ENEMY_COUNT	src/enemy.h	/^#define ENEMY_COUNT /;"	d
+ENEMY_HEIGHT	src/enemy.h	/^#define ENEMY_HEIGHT /;"	d
+ENEMY_ROWS	src/enemy.h	/^#define ENEMY_ROWS /;"	d
+ENEMY_SPRITE	src/enemy.h	/^#define ENEMY_SPRITE /;"	d
+ENEMY_WIDTH	src/enemy.h	/^#define ENEMY_WIDTH /;"	d
+INCLUDES	Makefile	/^INCLUDES=-I$(INCLUDE_SDL) -I$(INCLUDE_LOCAL)$/;"	m
+INCLUDE_LOCAL	Makefile	/^INCLUDE_LOCAL=\/home\/chuck\/.local\/include$/;"	m
+INCLUDE_SDL	Makefile	/^INCLUDE_SDL=\/usr\/include\/SDL2$/;"	m
+LAYER_BOTTOM	src/render.h	/^#define LAYER_BOTTOM /;"	d
+LAYER_MIDDLE	src/render.h	/^#define LAYER_MIDDLE /;"	d
+LAYER_TOP	src/render.h	/^#define LAYER_TOP /;"	d
+LIBS	Makefile	/^LIBS=-l$(LIB_SDL2) -l$(LIB_SDL_IMAGE) -l$(LIB_LIST)$/;"	m
+LIB_DIRS	Makefile	/^LIB_DIRS=-L$(LOCAL_LIBS)$/;"	m
+LIB_LIST	Makefile	/^LIB_LIST=list$/;"	m
+LIB_SDL2	Makefile	/^LIB_SDL2=SDL2$/;"	m
+LIB_SDL_IMAGE	Makefile	/^LIB_SDL_IMAGE=SDL2_image$/;"	m
+LOCAL_LIBS	Makefile	/^LOCAL_LIBS=\/home\/chuck\/.local\/lib$/;"	m
+OBJECTS	Makefile	/^OBJECTS=$(patsubst %.c,%.o,$(SOURCES))$/;"	m
+SHIP_HEIGHT	src/player.h	/^#define SHIP_HEIGHT /;"	d
+SHIP_SPRITE	src/player.h	/^#define SHIP_SPRITE /;"	d
+SHIP_WIDTH	src/player.h	/^#define SHIP_WIDTH /;"	d
+SOURCES	Makefile	/^SOURCES=$(wildcard $(SRC)\/**\/*.c $(SRC)\/*.c)$/;"	m
+SPRITE_FRAME_DELAY	src/animate.h	/^#define SPRITE_FRAME_DELAY /;"	d
+SRC	Makefile	/^SRC=src$/;"	m
+Sprite	src/sprite.h	/^typedef struct Sprite {$/;"	s
+Sprite	src/sprite.h	/^} Sprite;$/;"	t	typeref:struct:Sprite
+TARGET	Makefile	/^TARGET=bin\/spacegame$/;"	m
+WINDOW_HEIGHT	src/gfx.h	/^#define WINDOW_HEIGHT /;"	d
+WINDOW_WIDTH	src/gfx.h	/^#define WINDOW_WIDTH /;"	d
+add_to_render	src/render.c	/^void add_to_render(Sprite* sprite, int z_index)$/;"	f	typeref:typename:void
+all	Makefile	/^all: build $(TARGET)$/;"	t
+alpha	src/sprite.h	/^    int alpha;$/;"	m	struct:Sprite	typeref:typename:int
+animate_sprite_frames	src/render.c	/^void animate_sprite_frames(Sprite* sprite)$/;"	f	typeref:typename:void
+animations	src/sprite.h	/^    Node* animations;$/;"	m	struct:Sprite	typeref:typename:Node *
+arguments	compile_commands.json	/^        "arguments": [$/;"	a	object:0
+arguments	compile_commands.json	/^        "arguments": [$/;"	a	object:1
+arguments	compile_commands.json	/^        "arguments": [$/;"	a	object:2
+arguments	compile_commands.json	/^        "arguments": [$/;"	a	object:3
+arguments	compile_commands.json	/^        "arguments": [$/;"	a	object:4
+base	gfx/source/beziers/enemy_animate_in.svg	/^     inkscape:window-maximized="1">$/;"	i
+build	Makefile	/^build:$/;"	t
+clean	Makefile	/^clean:$/;"	t
+clear	src/gfx.c	/^int clear()$/;"	f	typeref:typename:int
+compile_commands	Makefile	/^compile_commands:$/;"	t
+create_enemy_sprite	src/enemy.c	/^Sprite* create_enemy_sprite()$/;"	f	typeref:typename:Sprite *
+create_player_sprite	src/player.c	/^Sprite* create_player_sprite()$/;"	f	typeref:typename:Sprite *
+create_sprite	src/sprite.c	/^Sprite* create_sprite(char* id, char* path, int frames, SDL_Rect* size, SDL_Rect* mask)$/;"	f	typeref:typename:Sprite *
+create_sprite_texture	src/gfx.c	/^SDL_Texture* create_sprite_texture(char* imgPath, int alpha)$/;"	f	typeref:typename:SDL_Texture *
+defs2	gfx/source/beziers/enemy_animate_in.svg	/^     id="defs2" \/>$/;"	i
+destroy_gfx	src/gfx.c	/^void destroy_gfx()$/;"	f	typeref:typename:void
+destroy_renderers	src/render.c	/^void destroy_renderers()$/;"	f	typeref:typename:void
+destroy_sprite	src/sprite.c	/^void destroy_sprite(Sprite* sprite)$/;"	f	typeref:typename:void
+directory	compile_commands.json	/^        "directory": "\/home\/chuck\/Projects\/spacegame2",$/;"	s	object:0
+directory	compile_commands.json	/^        "directory": "\/home\/chuck\/Projects\/spacegame2",$/;"	s	object:1
+directory	compile_commands.json	/^        "directory": "\/home\/chuck\/Projects\/spacegame2",$/;"	s	object:2
+directory	compile_commands.json	/^        "directory": "\/home\/chuck\/Projects\/spacegame2",$/;"	s	object:3
+directory	compile_commands.json	/^        "directory": "\/home\/chuck\/Projects\/spacegame2",$/;"	s	object:4
+enemy_count	src/enemy.c	/^int enemy_count = 0;$/;"	v	typeref:typename:int
+enemy_h	src/enemy.h	/^#define enemy_h$/;"	d
+enemy_sprite	src/enemy.c	/^Sprite* enemy_sprite;$/;"	v	typeref:typename:Sprite *
+file	compile_commands.json	/^        "file": "src\/gfx.c"$/;"	s	object:1
+file	compile_commands.json	/^        "file": "src\/player.c"$/;"	s	object:2
+file	compile_commands.json	/^        "file": "src\/render.c"$/;"	s	object:4
+file	compile_commands.json	/^        "file": "src\/spacegame.c"$/;"	s	object:3
+file	compile_commands.json	/^        "file": "src\/sprite.c"$/;"	s	object:0
+flags	src/sprite.h	/^    int flags;$/;"	m	struct:Sprite	typeref:typename:int
+frames	src/sprite.h	/^    int frames;$/;"	m	struct:Sprite	typeref:typename:int
+gen-suppressions	Makefile	/^gen-suppressions:$/;"	t
+get_size_rect	src/gfx.c	/^SDL_Rect* get_size_rect(int w, int h, int x, int y)$/;"	f	typeref:typename:SDL_Rect *
+gfx_h	src/gfx.h	/^#define gfx_h$/;"	d
+grid12	gfx/source/beziers/enemy_animate_in.svg	/^       empspacing="25" \/>$/;"	i
+id	src/sprite.h	/^    char* id;$/;"	m	struct:Sprite	typeref:typename:char *
+initialize_enemies	src/enemy.c	/^void initialize_enemies()$/;"	f	typeref:typename:void
+initialize_gfx	src/gfx.c	/^int initialize_gfx()$/;"	f	typeref:typename:int
+initialize_player	src/player.c	/^void initialize_player()$/;"	f	typeref:typename:void
+initialize_renderers	src/render.c	/^void initialize_renderers()$/;"	f	typeref:typename:void
+layer1	gfx/source/beziers/enemy_animate_in.svg	/^     sodipodi:insensitive="true">$/;"	i
+layer2	gfx/source/beziers/enemy_animate_in.svg	/^     inkscape:label="Layer 2">$/;"	i
+main	src/spacegame.c	/^int main()$/;"	f	typeref:typename:int
+mask	src/sprite.h	/^    SDL_Rect* mask;$/;"	m	struct:Sprite	typeref:typename:SDL_Rect *
+memcheck	Makefile	/^memcheck:$/;"	t
+metadata5	gfx/source/beziers/enemy_animate_in.svg	/^     id="metadata5">$/;"	i
+move_player	src/player.c	/^void move_player(int direction)$/;"	f	typeref:typename:void
+path	src/sprite.h	/^    char* path;$/;"	m	struct:Sprite	typeref:typename:char *
+path14	gfx/source/beziers/enemy_animate_in.svg	/^       sodipodi:nodetypes="cc" \/>$/;"	i
+path14-3	gfx/source/beziers/enemy_animate_in.svg	/^       sodipodi:nodetypes="cc" \/>$/;"	i
+player_h	src/player.h	/^#define player_h$/;"	d
+player_sprite	src/player.c	/^Sprite* player_sprite;$/;"	v	typeref:typename:Sprite *
+position_player_game	src/player.c	/^void position_player_game()$/;"	f	typeref:typename:void
+position_player_test	src/player.c	/^void position_player_test()$/;"	f	typeref:typename:void
+position_sprite	src/sprite.c	/^void position_sprite(Sprite* sprite, int x, int y)$/;"	f	typeref:typename:void
+present	src/gfx.c	/^void present()$/;"	f	typeref:typename:void
+rect16	gfx/source/beziers/enemy_animate_in.svg	/^       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.26439211;stroke-opacity:1" /;"	i
+render	src/render.c	/^void render()$/;"	f	typeref:typename:void
+render_bottom	src/render.c	/^Node* render_bottom = NULL;$/;"	v	typeref:typename:Node *
+render_h	src/render.h	/^#define render_h$/;"	d
+render_middle	src/render.c	/^Node* render_middle = NULL;$/;"	v	typeref:typename:Node *
+render_top	src/render.c	/^Node* render_top = NULL;$/;"	v	typeref:typename:Node *
+renderer	src/gfx.h	/^SDL_Renderer* renderer;$/;"	v	typeref:typename:SDL_Renderer *
+renderers	src/player.h	/^Node** renderers[3];$/;"	v	typeref:typename:Node ** [3]
+renderers	src/render.c	/^Node** renderers[3];$/;"	v	typeref:typename:Node ** [3]
+set_texture	src/gfx.c	/^int set_texture(SDL_Texture* texture, SDL_Rect* srcRect, SDL_Rect* destRect, int flip)$/;"	f	typeref:typename:int
+size	src/sprite.h	/^    SDL_Rect* size;$/;"	m	struct:Sprite	typeref:typename:SDL_Rect *
+sprite_h	src/sprite.h	/^#define sprite_h$/;"	d
+texture	src/sprite.h	/^    SDL_Texture* texture;$/;"	m	struct:Sprite	typeref:typename:SDL_Texture *
+visible	src/sprite.h	/^    int visible;$/;"	m	struct:Sprite	typeref:typename:int
+window	src/gfx.h	/^SDL_Window* window;$/;"	v	typeref:typename:SDL_Window *
